@@ -1,0 +1,30 @@
+<map id="include/primal/command/list.hpp" name="include/primal/command/list.hpp">
+<area shape="rect" id="Node000001" title="Defines a function template that prints every prime up to a given ceiling." alt="" coords="361,5,544,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="418,191,498,218"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,52,423,74,413,99,408,120,413,142,422,161,435,178,431,181,418,164,407,144,403,120,407,97,418,71,433,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="697,107,758,134"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="531,48,679,95,685,98,683,103,677,101,530,53"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="782,107,857,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="545,42,654,64,771,95,778,98,776,103,769,101,653,69,544,47"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,191,279,218"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="428,53,372,100,278,182,274,178,368,96,425,49"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="303,191,394,218"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="436,52,402,99,362,177,357,175,397,97,432,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="619,191,681,218"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="546,42,595,62,617,77,636,96,647,115,653,135,656,175,650,175,648,136,642,117,632,100,614,81,592,67,544,47"/>
+<area shape="rect" id="Node000008" href="$sieve_8hpp.html" title="Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er..." alt="" coords="422,107,622,134"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="471,49,505,92,501,96,467,52"/>
+<area shape="rect" id="Node000010" href="$format__specifier_8hpp.html" title="Defines a function template that gets the printf format specifier associated with a given type." alt="" coords="88,98,247,143"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="385,53,251,96,249,90,384,48"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="514,136,480,180,475,177,510,133"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="495,137,391,186,389,181,493,132"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="544,133,618,180,615,184,541,137"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="522,191,584,218"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="529,134,545,175,540,177,524,136"/>
+<area shape="poly" id="edge15_Node000010_Node000005" title=" " alt="" coords="191,141,228,178,224,181,187,145"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="217,141,307,181,305,186,214,146"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,191,87,218"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="137,145,80,184,77,179,134,141"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="111,191,197,218"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="166,144,161,175,156,175,161,143"/>
+</map>

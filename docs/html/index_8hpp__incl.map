@@ -1,0 +1,19 @@
+<map id="include/primal/command/index.hpp" name="include/primal/command/index.hpp">
+<area shape="rect" id="Node000001" title="Defines a function template that prints the prime with a particular index." alt="" coords="166,5,350,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,174,68,201"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,47,114,68,90,82,69,100,51,128,42,159,37,158,46,126,65,96,87,78,112,63,165,42"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,174,188,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,45,118,65,97,80,80,99,75,116,82,132,96,148,114,163,111,167,92,152,77,135,70,116,75,97,94,76,115,60,165,40"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="416,98,495,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,48,410,89,408,94,309,53"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="222,174,313,201"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="278,49,293,71,304,97,306,115,303,132,289,162,284,160,298,130,301,114,299,99,288,74,274,52"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="341,174,404,201"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="281,49,323,96,361,158,356,161,318,100,277,52"/>
+<area shape="rect" id="Node000007" href="$sieve_8hpp.html" title="Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er..." alt="" coords="90,98,290,126"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="242,52,213,87,208,84,238,49"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="164,129,78,169,76,164,161,124"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="185,128,166,161,161,159,180,125"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="205,124,244,161,241,165,202,128"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="223,124,328,165,326,170,222,129"/>
+</map>

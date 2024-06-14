@@ -1,0 +1,15 @@
+<map id="include/primal/utils/math/sieve.hpp" name="include/primal/utils/math/sieve.hpp">
+<area shape="rect" id="Node000001" title="Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er..." alt="" coords="153,5,300,50"/>
+<area shape="rect" id="Node000002" href="$index_8hpp.html" title="Defines a function template that prints the prime with a particular index." alt="" coords="5,191,189,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,61,144,78,125,100,113,122,106,146,100,190,94,190,100,145,108,120,120,96,140,74,164,56"/>
+<area shape="rect" id="Node000004" href="$list_8hpp.html" title="Defines a function template that prints every prime up to a given ceiling." alt="" coords="135,98,318,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,66,229,98,224,98,224,66"/>
+<area shape="rect" id="Node000005" href="$primality__test_8hpp.html" title="Defines function templates that perform primality tests on numbers." alt="" coords="342,98,524,143"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="291,54,385,95,382,100,289,59"/>
+<area shape="rect" id="Node000003" href="$session_8cpp.html" title="Defines functions that start different types of session." alt="" coords="166,283,287,311"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,242,207,281,204,285,143,246"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="229,158,229,283,224,283,224,158"/>
+<area shape="rect" id="Node000006" href="$test_8hpp.html" title="Defines a function template that prints whether a given number is a prime." alt="" coords="303,191,486,235"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="420,158,406,192,401,189,415,156"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="337,245,254,285,252,280,335,240"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="include/primal/utils/prompt.hpp" name="include/primal/utils/prompt.hpp">
+<area shape="rect" id="Node000001" title="Defines a function template that prompts the user for input and parses it to the requested type." alt="" coords="49,5,196,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,107,85,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,52,68,96,64,93,102,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,191,66,218"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,51,117,95,99,144,85,165,68,182,64,179,81,161,95,141,112,94,118,50"/>
+<area shape="rect" id="Node000004" href="$parse_8hpp.html" title="Defines function templates that parse strings to other types." alt="" coords="196,98,332,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,48,219,87,216,92,155,53"/>
+<area shape="poly" id="edge9_Node000004_Node000003" title=" " alt="" coords="204,146,81,190,79,185,203,141"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="90,191,152,218"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="227,146,158,185,155,180,224,141"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="176,191,255,218"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="253,144,233,178,229,176,249,142"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="280,191,344,218"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="279,142,299,176,294,178,274,144"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="368,191,426,218"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="300,141,364,180,362,185,298,146"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="450,191,536,218"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="325,141,443,183,441,188,324,146"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="559,191,651,218"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="333,135,545,186,543,191,332,141"/>
+</map>

@@ -1,0 +1,94 @@
+<map id="src/session.cpp" name="src/session.cpp">
+<area shape="rect" id="Node000001" title="Defines functions that start different types of session." alt="" coords="841,5,961,33"/>
+<area shape="rect" id="Node000002" href="$session_8hpp.html" title="Declares functions that start different types of session." alt="" coords="437,81,581,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="840,34,595,80,594,75,839,29"/>
+<area shape="rect" id="Node000003" href="$cli_8hpp.html" title="Declares a Cli class that parses command&#45;line arguments." alt="" coords="303,165,413,193"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="840,25,738,30,616,40,503,57,458,69,426,83,408,97,393,115,371,152,367,149,389,112,404,94,423,79,457,64,502,52,616,35,737,24,840,19"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,258,71,286"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="840,23,751,26,638,35,513,53,451,67,391,84,295,121,205,167,127,213,70,251,67,246,124,209,202,162,293,116,389,78,450,62,512,48,637,30,751,21,840,18"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1282,258,1362,286"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="934,31,1046,81,1114,116,1181,154,1246,201,1298,245,1295,249,1242,205,1178,159,1111,120,1043,86,932,36"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="777,342,862,370"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="890,35,860,70,821,121,783,182,755,250,750,272,755,293,769,314,787,331,783,335,765,317,750,295,745,272,750,249,779,180,817,118,856,66,886,32"/>
+<area shape="rect" id="Node000010" href="$ascii__art_8hpp.html" title="Defines a constant containing an ASCII art representation of the program&#39;s name." alt="" coords="1518,81,1668,109"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="962,23,1195,45,1503,78,1502,83,1194,50,961,28"/>
+<area shape="rect" id="Node000011" href="$index_8hpp.html" title="Defines a function template that prints the prime with a particular index." alt="" coords="1437,165,1637,193"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="961,25,1085,45,1156,60,1227,78,1261,92,1294,106,1385,135,1469,158,1468,163,1383,140,1292,111,1258,97,1225,84,1155,65,1084,50,960,30"/>
+<area shape="rect" id="Node000017" href="$list_8hpp.html" title="Defines a function template that prints every prime up to a given ceiling." alt="" coords="983,165,1168,193"/>
+<area shape="poly" id="edge23_Node000001_Node000017" title=" " alt="" coords="917,31,1051,152,1048,156,913,35"/>
+<area shape="rect" id="Node000022" href="$test_8hpp.html" title="Defines a function template that prints whether a given number is a prime." alt="" coords="1305,81,1494,109"/>
+<area shape="poly" id="edge36_Node000001_Node000022" title=" " alt="" coords="962,27,1295,76,1294,81,961,32"/>
+<area shape="rect" id="Node000026" href="$prompt_8hpp.html" title="Defines a function template that prompts the user for input and parses it to the requested type." alt="" coords="466,165,640,193"/>
+<area shape="poly" id="edge49_Node000001_Node000026" title=" " alt="" coords="841,30,752,48,705,63,659,83,611,118,574,156,570,152,608,114,657,79,703,58,751,43,840,24"/>
+<area shape="rect" id="Node000027" href="$parse_8hpp.html" title="Defines function templates that parse strings to other types." alt="" coords="554,249,690,294"/>
+<area shape="poly" id="edge60_Node000001_Node000027" title=" " alt="" coords="841,29,774,47,740,62,711,83,682,141,640,236,635,234,677,139,707,79,738,58,772,42,840,24"/>
+<area shape="rect" id="Node000031" title=" " alt="" coords="1692,81,1789,109"/>
+<area shape="poly" id="edge61_Node000001_Node000031" title=" " alt="" coords="961,20,1264,37,1467,54,1677,78,1676,83,1467,59,1264,42,961,25"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="486,112,397,160,394,155,483,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="303,194,200,217,84,252,79,254,77,249,82,247,199,212,302,189"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="437,342,495,370"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="368,192,452,328,448,330,364,195"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="279,258,378,286"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="356,194,340,244,335,242,351,192"/>
+<area shape="rect" id="Node000007" href="$command_8hpp.html" title="Defines an enum class that represents the different functions that the program may perform." alt="" coords="95,258,256,286"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="333,196,217,253,214,248,330,191"/>
+<area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="1506,196,1368,254,1366,249,1504,191"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1516,342,1579,370"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="1540,193,1548,326,1543,327,1535,194"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1696,342,1775,370"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="1636,191,1736,213,1777,229,1803,248,1809,260,1811,271,1803,295,1789,317,1771,334,1767,331,1785,314,1798,293,1806,270,1804,261,1799,251,1774,233,1734,218,1635,196"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1354,342,1445,370"/>
+<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="1528,195,1421,332,1417,328,1524,192"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1846,342,1908,370"/>
+<area shape="poly" id="edge17_Node000011_Node000015" title=" " alt="" coords="1638,182,1684,189,1733,201,1781,220,1824,247,1841,265,1855,285,1872,326,1867,328,1850,288,1837,268,1820,251,1778,225,1731,207,1683,194,1637,187"/>
+<area shape="rect" id="Node000016" href="$sieve_8hpp.html" title="Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er..." alt="" coords="1589,258,1789,286"/>
+<area shape="poly" id="edge18_Node000011_Node000016" title=" " alt="" coords="1560,191,1655,247,1652,252,1557,196"/>
+<area shape="poly" id="edge19_Node000016_Node000012" title=" " alt="" coords="1667,288,1584,336,1582,332,1665,284"/>
+<area shape="poly" id="edge20_Node000016_Node000013" title=" " alt="" coords="1698,285,1723,327,1718,330,1694,287"/>
+<area shape="poly" id="edge21_Node000016_Node000014" title=" " alt="" coords="1643,289,1461,340,1459,335,1641,284"/>
+<area shape="poly" id="edge22_Node000016_Node000015" title=" " alt="" coords="1720,284,1834,333,1832,338,1718,289"/>
+<area shape="poly" id="edge27_Node000017_Node000005" title=" " alt="" coords="983,186,869,193,740,205,623,224,577,237,543,252,530,264,514,283,484,330,479,327,510,280,526,260,541,247,575,232,622,219,740,200,868,188,983,181"/>
+<area shape="poly" id="edge24_Node000017_Node000013" title=" " alt="" coords="1095,191,1170,247,1198,272,1210,282,1227,291,1297,306,1423,321,1680,347,1680,352,1422,327,1297,311,1225,297,1207,287,1194,276,1167,251,1092,196"/>
+<area shape="poly" id="edge28_Node000017_Node000014" title=" " alt="" coords="1085,192,1121,241,1147,268,1177,292,1216,312,1259,327,1339,345,1338,350,1257,332,1214,317,1174,296,1143,272,1117,244,1081,195"/>
+<area shape="poly" id="edge29_Node000017_Node000015" title=" " alt="" coords="1108,191,1160,215,1217,247,1233,260,1244,272,1255,282,1271,292,1345,318,1409,332,1467,338,1523,338,1640,333,1708,333,1788,339,1830,345,1830,350,1787,345,1708,339,1640,338,1523,343,1467,343,1408,337,1343,323,1269,296,1251,287,1240,275,1229,264,1214,252,1158,220,1106,196"/>
+<area shape="poly" id="edge30_Node000017_Node000016" title=" " alt="" coords="1165,191,1585,252,1584,258,1164,196"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1045,258,1106,286"/>
+<area shape="poly" id="edge25_Node000017_Node000018" title=" " alt="" coords="1078,193,1078,243,1073,243,1073,193"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="765,258,839,286"/>
+<area shape="poly" id="edge26_Node000017_Node000019" title=" " alt="" coords="1028,196,946,221,852,252,846,254,844,249,850,247,944,215,1027,191"/>
+<area shape="rect" id="Node000020" href="$format__specifier_8hpp.html" title="Defines a function template that gets the printf format specifier associated with a given type." alt="" coords="863,249,1021,294"/>
+<area shape="poly" id="edge31_Node000017_Node000020" title=" " alt="" coords="1058,195,988,242,985,238,1055,191"/>
+<area shape="poly" id="edge34_Node000020_Node000005" title=" " alt="" coords="863,294,852,297,758,311,682,319,607,327,511,344,510,339,606,322,682,313,757,306,851,291,862,289"/>
+<area shape="poly" id="edge33_Node000020_Node000009" title=" " alt="" coords="911,297,853,335,850,331,908,292"/>
+<area shape="poly" id="edge35_Node000020_Node000014" title=" " alt="" coords="1022,289,1033,291,1199,321,1339,343,1338,348,1198,326,1032,297,1021,294"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="901,342,983,370"/>
+<area shape="poly" id="edge32_Node000020_Node000021" title=" " alt="" coords="945,294,945,326,939,326,939,294"/>
+<area shape="poly" id="edge38_Node000022_Node000008" title=" " alt="" coords="1396,110,1336,245,1331,243,1391,108"/>
+<area shape="poly" id="edge37_Node000022_Node000013" title=" " alt="" coords="1475,107,1560,126,1649,154,1705,171,1750,184,1770,193,1789,206,1807,223,1824,248,1832,271,1824,295,1806,319,1782,336,1779,332,1802,315,1820,293,1827,271,1820,251,1803,227,1786,210,1768,198,1748,189,1703,176,1648,159,1558,131,1474,112"/>
+<area shape="poly" id="edge39_Node000022_Node000014" title=" " alt="" coords="1402,109,1402,326,1397,326,1397,109"/>
+<area shape="poly" id="edge40_Node000022_Node000015" title=" " alt="" coords="1494,105,1506,106,1597,110,1715,112,1848,114,1988,119,2123,132,2185,142,2243,155,2295,172,2339,193,2375,218,2400,248,2410,272,2408,284,2400,296,2375,309,2328,320,2195,337,2045,349,1924,355,1924,350,2045,343,2195,332,2327,315,2373,304,2396,292,2403,282,2404,273,2396,251,2371,222,2336,197,2293,177,2242,160,2184,147,2122,137,1987,124,1848,119,1715,117,1597,116,1506,111,1494,110"/>
+<area shape="rect" id="Node000023" href="$primality_8hpp.html" title="Defines an enum class that represents the possible outcomes of a primality test." alt="" coords="2164,258,2387,286"/>
+<area shape="poly" id="edge41_Node000022_Node000023" title=" " alt="" coords="1494,105,1506,106,1653,110,1843,111,1939,115,2030,122,2109,134,2170,154,2199,173,2225,196,2262,243,2258,246,2221,200,2196,177,2168,159,2107,140,2029,127,1939,120,1842,117,1653,116,1506,111,1494,110"/>
+<area shape="rect" id="Node000024" href="$primality__test_8hpp.html" title="Defines function templates that perform primality tests on numbers." alt="" coords="1960,157,2156,201"/>
+<area shape="poly" id="edge42_Node000022_Node000024" title=" " alt="" coords="1494,105,1506,106,1724,128,1941,154,1945,155,1944,160,1940,159,1723,133,1506,111,1494,110"/>
+<area shape="poly" id="edge43_Node000024_Node000013" title=" " alt="" coords="2045,203,2004,250,1977,275,1947,296,1909,316,1867,331,1791,349,1790,344,1866,326,1906,311,1945,292,1974,271,2000,246,2041,200"/>
+<area shape="poly" id="edge45_Node000024_Node000014" title=" " alt="" coords="1960,186,1876,192,1779,204,1677,223,1578,252,1535,270,1495,292,1429,335,1426,331,1492,287,1533,265,1576,247,1676,218,1778,199,1875,187,1959,181"/>
+<area shape="poly" id="edge46_Node000024_Node000015" title=" " alt="" coords="2080,200,2096,221,2108,246,2113,271,2110,284,2104,296,2092,306,2074,316,2027,331,1924,351,1923,346,2026,326,2072,311,2089,302,2100,292,2105,282,2108,271,2103,247,2091,224,2076,203"/>
+<area shape="poly" id="edge48_Node000024_Node000016" title=" " alt="" coords="1970,204,1758,256,1757,251,1969,199"/>
+<area shape="poly" id="edge47_Node000024_Node000023" title=" " alt="" coords="2111,199,2231,249,2229,254,2109,204"/>
+<area shape="rect" id="Node000025" title=" " alt="" coords="2016,258,2090,286"/>
+<area shape="poly" id="edge44_Node000024_Node000025" title=" " alt="" coords="2059,202,2057,242,2052,242,2054,202"/>
+<area shape="poly" id="edge51_Node000026_Node000005" title=" " alt="" coords="542,195,521,220,500,251,484,290,474,328,469,326,479,288,496,248,517,216,538,191"/>
+<area shape="poly" id="edge50_Node000026_Node000008" title=" " alt="" coords="640,188,1267,261,1267,267,640,193"/>
+<area shape="poly" id="edge52_Node000026_Node000027" title=" " alt="" coords="565,192,598,235,594,238,560,195"/>
+<area shape="poly" id="edge58_Node000027_Node000005" title=" " alt="" coords="582,297,506,337,503,332,579,292"/>
+<area shape="poly" id="edge57_Node000027_Node000009" title=" " alt="" coords="675,292,775,333,773,338,673,297"/>
+<area shape="poly" id="edge54_Node000027_Node000013" title=" " alt="" coords="691,283,753,291,988,312,1171,320,1355,326,1590,339,1680,347,1680,352,1590,345,1354,332,1171,326,987,317,752,297,690,288"/>
+<area shape="poly" id="edge59_Node000027_Node000014" title=" " alt="" coords="691,282,753,291,1083,326,1338,347,1338,353,1082,332,752,297,690,288"/>
+<area shape="rect" id="Node000028" title=" " alt="" coords="519,342,581,370"/>
+<area shape="poly" id="edge53_Node000027_Node000028" title=" " alt="" coords="605,296,574,332,570,328,601,293"/>
+<area shape="rect" id="Node000029" title=" " alt="" coords="606,342,670,370"/>
+<area shape="poly" id="edge55_Node000027_Node000029" title=" " alt="" coords="629,294,635,326,630,327,624,295"/>
+<area shape="rect" id="Node000030" title=" " alt="" coords="694,342,753,370"/>
+<area shape="poly" id="edge56_Node000027_Node000030" title=" " alt="" coords="650,292,697,330,694,334,647,296"/>
+</map>
