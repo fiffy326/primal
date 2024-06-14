@@ -1,0 +1,118 @@
+<!--
+  ~ Copyright (c) 2024 Emma Casey
+  ~
+  ~ This program is free software: you can redistribute it and/or modify it under
+  ~ the terms of the GNU General Public License as published by the Free Software
+  ~ Foundation, either version 3 of the License, or (at your option) any later
+  ~ version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT
+  ~ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  ~ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  ~ details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with
+  ~ this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<!-- This page just redirects to the Doxygen index.html file, -->
+<!-- because the html subdirectory is cluttered and annoying. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Loading documentation...</title>
+    <style>
+        html {
+            background-color: #252525;
+        }
+
+        .container {
+            margin-top: 20%;
+            text-align: center;
+            width: fit-content;
+        }
+
+        #error-message {
+            font-size: 125%;
+            padding-bottom: 0.75em;
+        }
+
+        #error-section {
+            display: none;
+            color: #cccccc;
+        }
+
+        #loading-section {
+            display: block;
+            color: #cccccc;
+        }
+
+        #blocked-section {
+            display: none;
+        }
+    </style>
+</head>
+<div class="container">
+    <div id="loading-section" class="notification is-dark">
+        <p>Loading documentation...</p>
+    </div>
+    <div id="error-section" class="notification is-dark">
+        <p id="error-message"><b>Error: </b>No documentation pages were found.</p>
+        <p>Use the 'docs' CMake target to build the documentation.</p>
+    </div>
+    <div id="blocked-section" class="notification is-dark">
+        <p>
+            Unable to access local files due to browser security policy.<br>
+            Unsure if the Doxygen documentation pages are available.<br><br>
+            Use the 'docs' CMake target to generate them if needed.
+        </p>
+    </div>
+    <button class="button is-link is-light" onclick="redirectToDoxygen()">
+        View Documentation
+    </button>
+</div>
+<script>
+    /**
+     * Path to the Doxygen index.html file.
+     * @type {string}
+     */
+    const doxygenUri = "./html/index.html";
+
+    /**
+     * Page title when unable to find Doxygen files.
+     * @type {string}
+     */
+    const doxygenError = "Documentation not found";
+
+    /**
+     * Redirect to the Doxygen index.html file.
+     */
+    function redirectToDoxygen() {
+        window.location.href = doxygenUri;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch(doxygenUri).then(res => {
+            if (res.ok) redirectToDoxygen();
+            else throw new Error(doxygenError);
+        }).catch(err => {
+            if (err instanceof TypeError) {
+                // Blocked from accessing local file, unsure if file exists.
+                // Tell the user about the issue and show a redirect button.
+                document.title = doxygenError;
+                document.getElementById("loading-section").style.display = "none";
+                document.getElementById("blocked-section").style.display = "block";
+            } else {
+                // Able to access local files, but Doxygen files were not found.
+                document.title = doxygenError;
+                document.getElementById("loading-section").style.display = "none";
+                document.getElementById("error-section").style.display = "block";
+            }
+        });
+    });
+</script>
+</html>
