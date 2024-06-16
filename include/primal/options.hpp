@@ -36,11 +36,34 @@ namespace primal {
  * Represents the different functions that the program may perform.
  */
 enum class Function {
+    /**
+     * Start an interactive session.
+     */
     INTERACTIVE = 0,
+
+    /**
+     * Print the prime with a particular index.
+     */
     INDEX = 1,
+
+    /**
+     * Print every prime up to a given ceiling.
+     */
     LIST = 2,
+
+    /**
+     * Print whether a given number is a prime.
+     */
     TEST = 3,
+
+    /**
+     * Show version information.
+     */
     VERSION = 4,
+
+    /**
+     * Show usage information.
+     */
     HELP = 5
 };
 
