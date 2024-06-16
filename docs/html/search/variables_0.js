@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['command_0',['command',['../classprimal_1_1Cli.html#a105ad2cb02b49a30e0ad67a021db7e77',1,'primal::Cli']]]
+  ['function_0',['function',['../classprimal_1_1Options.html#ab73a0eec4bc122d1b3418303e17644ca',1,'primal::Options']]]
 ];

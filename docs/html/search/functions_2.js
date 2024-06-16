@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['formatspecifier_0',['formatSpecifier',['../namespaceprimal_1_1utils_1_1string.html#a9058de3cfe2e576953d342be4196614b',1,'primal::utils::string']]]
+  ['gethelptext_0',['getHelpText',['../classprimal_1_1Options.html#a0d7ccc6f36297a5f75afc1a0862f95f9',1,'primal::Options']]]
 ];

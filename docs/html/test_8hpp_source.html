@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>primal: include/primal/command/test.hpp Source File</title>
+<title>primal: include/primal/functions/test.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -111,59 +111,60 @@ $(function(){initNavTree('test_8hpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * details.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * You should have received a copy of the GNU General Public License along with</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * this program. If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="primality_8hpp.html">primal/utils/math/primality.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="primality__test_8hpp.html">primal/utils/math/primality_test.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef PRIMAL_TEST_HPP</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define PRIMAL_TEST_HPP</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef PRIMAL_TEST_HPP</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="test_8hpp.html#aa00659770060e275a88541dcffee65f9">   35</a></span><span class="preprocessor">#define PRIMAL_TEST_HPP</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprimal_1_1command.html">primal::command</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">requires</span> std::is_unsigned_v&lt;T&gt;</div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespaceprimal_1_1command.html#abd8d85b49ba0c8506b18f7542113f930">   46</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceprimal_1_1command.html#abd8d85b49ba0c8506b18f7542113f930">test</a>(T n) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">using namespace </span>utils::math;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="primality-test_8hpp.html">primal/utils/math/primality-test.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprimal_1_1functions.html">primal::functions</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">requires</span> std::is_unsigned_v&lt;T&gt;</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespaceprimal_1_1functions.html#ae16c388e380eb29c4ac58a7b832b971d">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceprimal_1_1functions.html#ae16c388e380eb29c4ac58a7b832b971d">test</a>(T number) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using </span><a class="code hl_enumeration" href="namespaceprimal_1_1utils_1_1math.html#a28d9971208ef6e12a606a9b7769f8e9e">utils::math::Primality</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">using </span><a class="code hl_function" href="namespaceprimal_1_1utils_1_1math.html#ae69b16cad43a6a042fb8102e7ab839ff">utils::math::sieveTest</a>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">switch</span> (sieveTest(n)) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">switch</span> (sieveTest(number)) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">case</span> Primality::PRIME:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::cout &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; is prime.\n&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::cout &lt;&lt; number &lt;&lt; <span class="stringliteral">&quot; is prime.\n&quot;</span>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">case</span> Primality::COMPOSITE:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::cout &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; is composite.\n&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::cout &lt;&lt; number &lt;&lt; <span class="stringliteral">&quot; is composite.\n&quot;</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">case</span> Primality::NEITHER:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::cout &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; is neither prime nor composite.\n&quot;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::cout &lt;&lt; number &lt;&lt; <span class="stringliteral">&quot; is neither prime nor composite.\n&quot;</span>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace primal::commands</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace primal::functions</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// PRIMAL_TEST_HPP</span></div>
-<div class="ttc" id="anamespaceprimal_1_1command_html"><div class="ttname"><a href="namespaceprimal_1_1command.html">primal::command</a></div><div class="ttdef"><b>Definition</b> index.hpp:37</div></div>
-<div class="ttc" id="anamespaceprimal_1_1command_html_abd8d85b49ba0c8506b18f7542113f930"><div class="ttname"><a href="namespaceprimal_1_1command.html#abd8d85b49ba0c8506b18f7542113f930">primal::command::test</a></div><div class="ttdeci">void test(T n)</div><div class="ttdef"><b>Definition</b> test.hpp:46</div></div>
-<div class="ttc" id="aprimality_8hpp_html"><div class="ttname"><a href="primality_8hpp.html">primality.hpp</a></div><div class="ttdoc">Defines an enum class that represents the possible outcomes of a primality test.</div></div>
-<div class="ttc" id="aprimality__test_8hpp_html"><div class="ttname"><a href="primality__test_8hpp.html">primality_test.hpp</a></div><div class="ttdoc">Defines function templates that perform primality tests on numbers.</div></div>
+<div class="ttc" id="anamespaceprimal_1_1functions_html"><div class="ttname"><a href="namespaceprimal_1_1functions.html">primal::functions</a></div><div class="ttdef"><b>Definition</b> index.hpp:37</div></div>
+<div class="ttc" id="anamespaceprimal_1_1functions_html_ae16c388e380eb29c4ac58a7b832b971d"><div class="ttname"><a href="namespaceprimal_1_1functions.html#ae16c388e380eb29c4ac58a7b832b971d">primal::functions::test</a></div><div class="ttdeci">void test(T number)</div><div class="ttdef"><b>Definition</b> test.hpp:45</div></div>
+<div class="ttc" id="anamespaceprimal_1_1utils_1_1math_html_a28d9971208ef6e12a606a9b7769f8e9e"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1math.html#a28d9971208ef6e12a606a9b7769f8e9e">primal::utils::math::Primality</a></div><div class="ttdeci">Primality</div><div class="ttdef"><b>Definition</b> primality-test.hpp:40</div></div>
+<div class="ttc" id="anamespaceprimal_1_1utils_1_1math_html_ae69b16cad43a6a042fb8102e7ab839ff"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1math.html#ae69b16cad43a6a042fb8102e7ab839ff">primal::utils::math::sieveTest</a></div><div class="ttdeci">Primality sieveTest(T number)</div><div class="ttdef"><b>Definition</b> primality-test.hpp:103</div></div>
+<div class="ttc" id="aprimality-test_8hpp_html"><div class="ttname"><a href="primality-test_8hpp.html">primality-test.hpp</a></div><div class="ttdoc">Defines function templates that perform primality tests on numbers.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_21116d45698b21512fc2ea515ea8fa0b.html">primal</a></li><li class="navelem"><a class="el" href="dir_66fb2d9cdbf1b8caa3ccf8420ef0cb59.html">command</a></li><li class="navelem"><a class="el" href="test_8hpp.html">test.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_21116d45698b21512fc2ea515ea8fa0b.html">primal</a></li><li class="navelem"><a class="el" href="dir_d8598d53f2df1eb17ffb91075c5d8558.html">functions</a></li><li class="navelem"><a class="el" href="test_8hpp.html">test.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

@@ -1,7 +1,0 @@
-<map id="include/primal/utils/string/format_specifier.hpp" name="include/primal/utils/string/format_specifier.hpp">
-<area shape="rect" id="Node000001" title="Defines a function template that gets the printf format specifier associated with a given type." alt="" coords="5,5,205,50"/>
-<area shape="rect" id="Node000002" href="$list_8hpp.html" title="Defines a function template that prints every prime up to a given ceiling." alt="" coords="13,98,197,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,66,108,98,102,98,102,66"/>
-<area shape="rect" id="Node000003" href="$session_8cpp.html" title="Defines functions that start different types of session." alt="" coords="45,191,165,218"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,158,108,190,102,190,102,158"/>
-</map>

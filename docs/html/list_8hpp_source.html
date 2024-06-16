@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>primal: include/primal/command/list.hpp Source File</title>
+<title>primal: include/primal/functions/list.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -111,11 +111,11 @@ $(function(){initNavTree('list_8hpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * details.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * You should have received a copy of the GNU General Public License along with</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * this program. If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef PRIMAL_LIST_HPP</span></div>
@@ -129,48 +129,51 @@ $(function(){initNavTree('list_8hpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="sieve_8hpp.html">primal/utils/math/sieve.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="format__specifier_8hpp.html">primal/utils/string/format_specifier.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="format-specifier_8hpp.html">primal/utils/string/format-specifier.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprimal_1_1command.html">primal::command</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceprimal_1_1functions.html">primal::functions</a> {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">requires</span> std::is_unsigned_v&lt;T&gt;</div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespaceprimal_1_1command.html#a977ab8b0e8e4acd7dd0361ec46e95d74">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceprimal_1_1command.html#a977ab8b0e8e4acd7dd0361ec46e95d74">list</a>(T ceiling) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// Compute the primes up to the ceiling.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;T&gt; primes;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="namespaceprimal_1_1utils_1_1math.html#a12f01a71e3e2d13d149b565ccb3fcc5b">utils::math::sieve</a>(ceiling, primes);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Build the printf string for the output.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::string format = <a class="code hl_function" href="namespaceprimal_1_1utils_1_1string.html#a9058de3cfe2e576953d342be4196614b">utils::string::formatSpecifier&lt;T&gt;</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::stringstream output_format_stream;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    output_format_stream &lt;&lt; <span class="stringliteral">&quot;Prime #&quot;</span> &lt;&lt; format &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; format &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::string output_format = output_format_stream.str();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* output = output_format.c_str();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Print the computed primes and their indices.</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Use printf inside the loop to increase performance.</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">for</span> (T i = 0; i &lt; primes.size(); i++) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        printf(output, (i + 1), primes[i]);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespaceprimal_1_1functions.html#a60773216da1b8b004cf941896d7e2b9f">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceprimal_1_1functions.html#a60773216da1b8b004cf941896d7e2b9f">list</a>(T ceiling) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span><a class="code hl_function" href="namespaceprimal_1_1utils_1_1math.html#a12f01a71e3e2d13d149b565ccb3fcc5b">utils::math::sieve</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">using </span><a class="code hl_function" href="namespaceprimal_1_1utils_1_1string.html#a9058de3cfe2e576953d342be4196614b">utils::string::formatSpecifier</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// Calculate the primes up to the ceiling.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;T&gt; primes;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    sieve(ceiling, primes);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Build the printf string for the output.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::string format = formatSpecifier&lt;T&gt;();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::stringstream outputFormatStream;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    outputFormatStream &lt;&lt; <span class="stringliteral">&quot;Prime #&quot;</span> &lt;&lt; format &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; format &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::string outputFormat = outputFormatStream.str();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* output = outputFormat.c_str();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Print the calculated primes and their indices.</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Use printf inside the loop to increase performance.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">for</span> (T i = 0; i &lt; primes.size(); i++) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        printf(output, (i + 1), primes[i]);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace primal::commands</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// PRIMAL_LIST_HPP</span></div>
-<div class="ttc" id="aformat__specifier_8hpp_html"><div class="ttname"><a href="format__specifier_8hpp.html">format_specifier.hpp</a></div><div class="ttdoc">Defines a function template that gets the printf format specifier associated with a given type.</div></div>
-<div class="ttc" id="anamespaceprimal_1_1command_html"><div class="ttname"><a href="namespaceprimal_1_1command.html">primal::command</a></div><div class="ttdef"><b>Definition</b> index.hpp:37</div></div>
-<div class="ttc" id="anamespaceprimal_1_1command_html_a977ab8b0e8e4acd7dd0361ec46e95d74"><div class="ttname"><a href="namespaceprimal_1_1command.html#a977ab8b0e8e4acd7dd0361ec46e95d74">primal::command::list</a></div><div class="ttdeci">void list(T ceiling)</div><div class="ttdef"><b>Definition</b> list.hpp:48</div></div>
-<div class="ttc" id="anamespaceprimal_1_1utils_1_1math_html_a12f01a71e3e2d13d149b565ccb3fcc5b"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1math.html#a12f01a71e3e2d13d149b565ccb3fcc5b">primal::utils::math::sieve</a></div><div class="ttdeci">void sieve(T ceiling, std::vector&lt; T &gt; &amp;primes)</div><div class="ttdef"><b>Definition</b> sieve.hpp:45</div></div>
-<div class="ttc" id="anamespaceprimal_1_1utils_1_1string_html_a9058de3cfe2e576953d342be4196614b"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1string.html#a9058de3cfe2e576953d342be4196614b">primal::utils::string::formatSpecifier</a></div><div class="ttdeci">std::string formatSpecifier()</div><div class="ttdef"><b>Definition</b> format_specifier.hpp:42</div></div>
-<div class="ttc" id="asieve_8hpp_html"><div class="ttname"><a href="sieve_8hpp.html">sieve.hpp</a></div><div class="ttdoc">Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er...</div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <span class="comment">// namespace primal::functions</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span><span class="comment">// PRIMAL_LIST_HPP</span></div>
+<div class="ttc" id="aformat-specifier_8hpp_html"><div class="ttname"><a href="format-specifier_8hpp.html">format-specifier.hpp</a></div><div class="ttdoc">Defines a function template that gets the printf format specifier associated with a given type.</div></div>
+<div class="ttc" id="anamespaceprimal_1_1functions_html"><div class="ttname"><a href="namespaceprimal_1_1functions.html">primal::functions</a></div><div class="ttdef"><b>Definition</b> index.hpp:37</div></div>
+<div class="ttc" id="anamespaceprimal_1_1functions_html_a60773216da1b8b004cf941896d7e2b9f"><div class="ttname"><a href="namespaceprimal_1_1functions.html#a60773216da1b8b004cf941896d7e2b9f">primal::functions::list</a></div><div class="ttdeci">void list(T ceiling)</div><div class="ttdef"><b>Definition</b> list.hpp:48</div></div>
+<div class="ttc" id="anamespaceprimal_1_1utils_1_1math_html_a12f01a71e3e2d13d149b565ccb3fcc5b"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1math.html#a12f01a71e3e2d13d149b565ccb3fcc5b">primal::utils::math::sieve</a></div><div class="ttdeci">void sieve(T ceiling, std::vector&lt; T &gt; &amp;primes)</div><div class="ttdef"><b>Definition</b> sieve.hpp:44</div></div>
+<div class="ttc" id="anamespaceprimal_1_1utils_1_1string_html_a9058de3cfe2e576953d342be4196614b"><div class="ttname"><a href="namespaceprimal_1_1utils_1_1string.html#a9058de3cfe2e576953d342be4196614b">primal::utils::string::formatSpecifier</a></div><div class="ttdeci">std::string formatSpecifier()</div><div class="ttdef"><b>Definition</b> format-specifier.hpp:42</div></div>
+<div class="ttc" id="asieve_8hpp_html"><div class="ttname"><a href="sieve_8hpp.html">sieve.hpp</a></div><div class="ttdoc">Defines a function template that finds all prime numbers below a given ceiling using a Sieve of Erato...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_21116d45698b21512fc2ea515ea8fa0b.html">primal</a></li><li class="navelem"><a class="el" href="dir_66fb2d9cdbf1b8caa3ccf8420ef0cb59.html">command</a></li><li class="navelem"><a class="el" href="list_8hpp.html">list.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_21116d45698b21512fc2ea515ea8fa0b.html">primal</a></li><li class="navelem"><a class="el" href="dir_d8598d53f2df1eb17ffb91075c5d8558.html">functions</a></li><li class="navelem"><a class="el" href="list_8hpp.html">list.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

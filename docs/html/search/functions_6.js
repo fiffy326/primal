@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]]
+  ['options_0',['Options',['../classprimal_1_1Options.html#a7b4f89d74ed6692a440f6a45bf7e892e',1,'primal::Options']]]
 ];

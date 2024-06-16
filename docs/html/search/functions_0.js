@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cli_0',['Cli',['../classprimal_1_1Cli.html#ad1e3fed186945f0bb38c77ee94fa2c84',1,'primal::Cli']]]
+  ['divisiontest_0',['divisionTest',['../namespaceprimal_1_1utils_1_1math.html#a1ecae2cb93cedaaa2dec49a9d1f4abcb',1,'primal::utils::math']]]
 ];

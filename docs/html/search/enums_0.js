@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['command_0',['Command',['../namespaceprimal.html#a30dc5280f8549a5c9b2d89a37b6a76ec',1,'primal']]]
+  ['function_0',['Function',['../namespaceprimal.html#abd309b1c2716da2bd87b0eeed0bcb47c',1,'primal']]]
 ];

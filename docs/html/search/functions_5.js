@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['list_0',['list',['../namespaceprimal_1_1command.html#a977ab8b0e8e4acd7dd0361ec46e95d74',1,'primal::command']]]
+  ['main_0',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]]
 ];

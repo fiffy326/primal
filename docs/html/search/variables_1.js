@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['indexarg_0',['indexArg',['../classprimal_1_1Cli.html#afeb28066586a42f814a6fb66755a47fc',1,'primal::Cli']]]
+  ['indexarg_0',['indexArg',['../classprimal_1_1Options.html#a718994299f3d00c1b4815ca7f7949c15',1,'primal::Options']]]
 ];

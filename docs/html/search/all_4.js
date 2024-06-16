@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gethelptext_0',['getHelpText',['../classprimal_1_1Cli.html#a6a9e65c6c765bf2b276df738a0b2c92e',1,'primal::Cli']]]
+  ['gethelptext_0',['getHelpText',['../classprimal_1_1Options.html#a0d7ccc6f36297a5f75afc1a0862f95f9',1,'primal::Options']]]
 ];

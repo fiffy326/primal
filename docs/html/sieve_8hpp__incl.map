@@ -1,5 +1,5 @@
 <map id="include/primal/utils/math/sieve.hpp" name="include/primal/utils/math/sieve.hpp">
-<area shape="rect" id="Node000001" title="Defines a function template that computes the prime numbers up to a given ceiling using a Sieve of Er..." alt="" coords="113,5,259,50"/>
+<area shape="rect" id="Node000001" title="Defines a function template that finds all prime numbers below a given ceiling using a Sieve of Erato..." alt="" coords="113,5,259,50"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,98,68,126"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,53,75,93,72,88,145,48"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="92,98,171,126"/>

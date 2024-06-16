@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['test_0',['TEST',['../namespaceprimal.html#a30dc5280f8549a5c9b2d89a37b6a76eca033bd94b1168d7e4f0d644c3c95e35bf',1,'primal']]],
-  ['test_1',['test',['../namespaceprimal_1_1command.html#abd8d85b49ba0c8506b18f7542113f930',1,'primal::command']]],
-  ['test_2ehpp_2',['test.hpp',['../test_8hpp.html',1,'']]],
-  ['testarg_3',['testArg',['../classprimal_1_1Cli.html#a33a7baab491f58cb323f10a880990a07',1,'primal::Cli']]]
+  ['session_0',['session',['../namespaceprimal.html#a4a9c19abe410158d2ec5d73f1e1f5fd1',1,'primal::session()'],['../namespaceprimal.html#a7230885096d7aea329024d62a11ec7fa',1,'primal::session(const Options &amp;options)']]],
+  ['session_2ecpp_1',['session.cpp',['../session_8cpp.html',1,'']]],
+  ['session_2ehpp_2',['session.hpp',['../session_8hpp.html',1,'']]],
+  ['sieve_3',['sieve',['../namespaceprimal_1_1utils_1_1math.html#a12f01a71e3e2d13d149b565ccb3fcc5b',1,'primal::utils::math']]],
+  ['sieve_2ehpp_4',['sieve.hpp',['../sieve_8hpp.html',1,'']]],
+  ['sievetest_5',['sieveTest',['../namespaceprimal_1_1utils_1_1math.html#ae69b16cad43a6a042fb8102e7ab839ff',1,'primal::utils::math']]]
 ];
