@@ -26,8 +26,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "primal/cli.hpp"
-#include "primal/command.hpp"
+#include "primal/options.hpp"
 #include "primal/session.hpp"
 
 /**
@@ -37,23 +36,22 @@
  * @return EXIT_SUCCESS if successful, EXIT_FAILURE otherwise
  */
 int main(int argc, char** argv) {
+    using namespace primal;
     try {
-        using namespace primal;
-
         // Parse the command-line arguments.
-        Cli cli(argc, argv);
+        Options options(argc, argv);
 
         // Start the appropriate type of session.
-        switch (cli.command) {
-        case Command::INTERACTIVE:
+        switch (options.function) {
+        case Function::INTERACTIVE:
             session();
             break;
         default:
-            session(cli);
+            session(options);
             break;
         }
     } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << "\n";
+        std::cerr << "Error: " << std::endl;
         return EXIT_FAILURE;
     }
     return EXIT_SUCCESS;

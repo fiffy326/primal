@@ -18,94 +18,112 @@
 /**
  * @author Emma Casey
  * @date 2024-06-14
- * @file primality_test.hpp
+ * @file primality-test.hpp
  * @brief Defines function templates that perform primality tests on numbers.
  */
+
+#ifndef PRIMAL_PRIMALITY_TEST_HPP
+#define PRIMAL_PRIMALITY_TEST_HPP
 
 #include <concepts>
 #include <optional>
 #include <type_traits>
 #include <vector>
 
-#include "primal/utils/math/primality.hpp"
 #include "primal/utils/math/sieve.hpp"
-
-#ifndef PRIMAL_PRIMALITY_TEST_HPP
-#define PRIMAL_PRIMALITY_TEST_HPP
 
 namespace primal::utils::math {
 
 /**
- * Performs preliminary checks on a number to quickly determine the primality
- * of easy-to-categorize numbers.
+ * Represents the possible outcomes of a primality test.
+ */
+enum class Primality {
+    /**
+     * The number is neither prime nor composite.
+     */
+    NEITHER = 0,
+
+    /**
+     * The number is composite.
+     */
+    COMPOSITE = 1,
+
+    /**
+     * The number is prime.
+     */
+    PRIME = 2
+};
+
+/**
+ * Performs preliminary checks on a number to quickly determine the primality of
+ * easy-to-categorize numbers.
  * @details Test may be inconclusive and is intended to be used in conjunction
  * with more rigorous tests.
  * @tparam T Unsigned integer type
- * @param n Number to check
+ * @param number Number to check
  * @return Primality enum of test outcome if conclusive, std::nullopt otherwise
  */
 template <typename T>
-std::optional<Primality> preliminaryCheck(T n) {
-    if ((n == 0) || (n == 1)) return Primality::NEITHER;
-    if ((n == 2) || (n == 3)) return Primality::PRIME;
-    if (!(n % 2) || !(n % 3)) return Primality::COMPOSITE;
+std::optional<Primality> preliminaryCheck(T number) {
+    if ((number == 0) || (number == 1)) return Primality::NEITHER;
+    if ((number == 2) || (number == 3)) return Primality::PRIME;
+    if (!(number % 2) || !(number % 3)) return Primality::COMPOSITE;
     return std::nullopt;
 }
 
 /**
  * Performs a primality test on a number using trial division.
  * @tparam T Unsigned integer type
- * @param n Number to test
+ * @param number Number to test
  * @return Primality enum of test outcome
  */
 template <typename T>
 requires std::is_unsigned_v<T>
-Primality divisionTest(T n) {
-    // Perform a preliminary check to filter out easy-to-categorize numbers.
-    if (auto result = preliminaryCheck(n)) return *result;
+Primality divisionTest(T number) {
+    // Filter out easy-to-categorize numbers.
+    if (auto result = preliminaryCheck(number)) return *result;
 
-    // Test the surviving numbers using trial division.
-    for (T i = 5; i * i < n; i += 6) {
-        if (!(n % i) || !(n % (i + 2))) return Primality::COMPOSITE;
+    // Test remaining numbers using trial division.
+    for (T i = 5; i * i < number; i += 6) {
+        if (!(number % i) || !(number % (i + 2))) return Primality::COMPOSITE;
     }
 
-    // Any number that survives the trial division test must be prime.
+    // The number must be prime if it survived the trial division test.
     return Primality::PRIME;
 }
 
 /**
  * Performs a primality test on a number using a Sieve of Eratosthenes.
  * @tparam T Unsigned integer type
- * @param n Number to test
+ * @param number Number to test
  * @return Primality enum of test outcome
  */
 template <typename T>
 requires std::is_unsigned_v<T>
-Primality sieveTest(T n) {
-    // Perform a preliminary check to filter out easy-to-categorize numbers.
-    if (auto result = preliminaryCheck(n)) return *result;
+Primality sieveTest(T number) {
+    // Filter out easy-to-categorize numbers.
+    if (auto result = preliminaryCheck(number)) return *result;
 
-    // Test the surviving numbers using a Sieve of Eratosthenes.
+    // Test remaining numbers using a Sieve of Eratosthenes.
     std::vector<T> primes;
-    sieve(n, primes);
 
-    // If the number is prime, it will be the last element in the vector.
-    if (!primes.empty() && primes.back() == n) return Primality::PRIME;
+    // If the final element in the vector is the number, then it is prime.
+    if (!primes.empty() && primes.back() == number) return Primality::PRIME;
 
-    // If the sieve did not produce the number, it is composite.
+    // The number must be composite if the Sieve didn't generate it.
     return Primality::COMPOSITE;
 }
 
 /**
  * Checks whether a number is prime or not using a Sieve of Eratosthenes.
  * @tparam T Unsigned integer type
- * @param n Number to check
+ * @param number Number to check
  * @return True if prime, false otherwise
  */
 template <typename T>
 requires std::is_unsigned_v<T>
-bool isPrime(T n) {
-    return sieveTest(n) == Primality::PRIME;
+bool isPrime(T number) {
+    return sieveTest(number) == Primality::PRIME;
 }
 
 } // namespace primal::utils::math

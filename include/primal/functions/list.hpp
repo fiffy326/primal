@@ -34,9 +34,9 @@
 #include <vector>
 
 #include "primal/utils/math/sieve.hpp"
-#include "primal/utils/string/format_specifier.hpp"
+#include "primal/utils/string/format-specifier.hpp"
 
-namespace primal::command {
+namespace primal::functions {
 
 /**
  * Print every prime up to a given ceiling.
@@ -46,24 +46,27 @@ namespace primal::command {
 template <typename T>
 requires std::is_unsigned_v<T>
 void list(T ceiling) {
-    // Compute the primes up to the ceiling.
+    using utils::math::sieve;
+    using utils::string::formatSpecifier;
+
+    // Calculate the primes up to the ceiling.
     std::vector<T> primes;
-    utils::math::sieve(ceiling, primes);
+    sieve(ceiling, primes);
 
     // Build the printf string for the output.
-    std::string format = utils::string::formatSpecifier<T>();
-    std::stringstream output_format_stream;
-    output_format_stream << "Prime #" << format << " = " << format << "\n";
-    std::string output_format = output_format_stream.str();
-    const char* output = output_format.c_str();
+    std::string format = formatSpecifier<T>();
+    std::stringstream outputFormatStream;
+    outputFormatStream << "Prime #" << format << " = " << format << "\n";
+    std::string outputFormat = outputFormatStream.str();
+    const char* output = outputFormat.c_str();
 
-    // Print the computed primes and their indices.
+    // Print the calculated primes and their indices.
     // Use printf inside the loop to increase performance.
     for (T i = 0; i < primes.size(); i++) {
         printf(output, (i + 1), primes[i]);
     }
 }
 
-} // namespace primal::commands
+} // namespace primal::functions
 
 #endif // PRIMAL_LIST_HPP

@@ -18,7 +18,7 @@
 /**
  * @author Emma Casey
  * @date 2024-06-14
- * @file ascii_art.hpp
+ * @file ascii-art.hpp
  * @brief Defines a constant containing an ASCII art representation of the
  * program's name.
  */
@@ -49,6 +49,6 @@ static const char asciiArt[] = {
     0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
     0x20, 0x20, 0x20, 0x20, 0x0A, 0x00};
 
-} // namespace primal
+}
 
 #endif // PRIMAL_ASCII_ART_HPP

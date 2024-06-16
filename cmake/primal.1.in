@@ -3,19 +3,19 @@
 primal \- Computes prime numbers using a Sieve of Eratosthenes.
 .SH SYNOPSIS
 .B primal
+.RB [ \-n | \-\-nth   " " INDEX   ]
 .RB [ \-l | \-\-list  " " CEILING ]
-.RB [ \-i | \-\-index " " INDEX   ]
 .RB [ \-t | \-\-test  " " NUMBER  ]
 .SH DESCRIPTION
 Primal is a command-line program written in C++ that computes prime numbers
 using a Sieve of Eratosthenes.
 .SH OPTIONS
 .TP
-.B \-l, \-\-list CEILING
-Print every prime up to a given ceiling.
-.TP
 .B \-i, \-\-index INDEX
 Print the prime with a particular index.
+.TP
+.B \-l, \-\-list CEILING
+Print every prime up to a given ceiling.
 .TP
 .B \-t, \-\-test NUMBER
 Print whether a given number is a prime.
@@ -32,14 +32,14 @@ Show usage information.
 .B primal
 .fi
 .TP
-.B Print every prime up to 4096:
-.nf
-.B primal -l 4096
-.fi
-.TP
 .B Print the 777th prime number:
 .nf
 .B primal -i 777
+.fi
+.TP
+.B Print every prime up to 4096:
+.nf
+.B primal -l 4096
 .fi
 .TP
 .B Print whether 997 is a prime:

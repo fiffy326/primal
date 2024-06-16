@@ -22,6 +22,9 @@
  * @brief Defines function templates that parse strings to other types.
  */
 
+#ifndef PRIMAL_PARSE_HPP
+#define PRIMAL_PARSE_HPP
+
 #include <cerrno>
 #include <concepts>
 #include <cstdlib>
@@ -29,9 +32,6 @@
 #include <stdexcept>
 #include <string>
 #include <type_traits>
-
-#ifndef PRIMAL_PARSE_HPP
-#define PRIMAL_PARSE_HPP
 
 namespace primal::utils::string {
 
@@ -58,13 +58,13 @@ T parse(const std::string& text) {
     }
 
     // Range of valid values for the requested numeric type.
-    T type_min = std::numeric_limits<T>::min();
-    T type_max = std::numeric_limits<T>::max();
+    T typeMin = std::numeric_limits<T>::min();
+    T typeMax = std::numeric_limits<T>::max();
 
     // Check if the input was valid and parsed successfully.
     if (text.empty() || *end != '\0') {
         throw std::runtime_error("String was not a valid numeric value.");
-    } else if (errno == ERANGE || value < type_min || value > type_max) {
+    } else if (errno == ERANGE || value < typeMin || value > typeMax) {
         throw std::runtime_error("Numeric value of string was out of range "
                                  "for the requested numeric type.");
     }

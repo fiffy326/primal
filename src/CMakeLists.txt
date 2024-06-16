@@ -1,7 +1,7 @@
 # Specify the source files
 set(SOURCES
-        cli.cpp
         main.cpp
+        options.cpp
         session.cpp)
 
 # Define the target

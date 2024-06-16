@@ -25,7 +25,7 @@
 #ifndef PRIMAL_SESSION_HPP
 #define PRIMAL_SESSION_HPP
 
-#include "primal/cli.hpp"
+#include "primal/options.hpp"
 
 namespace primal {
 
@@ -35,10 +35,10 @@ namespace primal {
 void session();
 
 /**
- * Starts a session using the command-line options.
- * @param cli Parsed command-line options object
+ * Starts a session using the command-line arguments.
+ * @param options Parsed command-line arguments
  */
-void session(Cli& cli);
+void session(const Options& options);
 
 } // namespace primal
 

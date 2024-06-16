@@ -15,14 +15,6 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-/**
- * @author Emma Casey
- * @date 2024-06-14
- * @file sieve.hpp
- * @brief Defines a function template that computes the prime numbers up to a
- * given ceiling using a Sieve of Eratosthenes.
- */
-
 #ifndef PRIMAL_SIEVE_HPP
 #define PRIMAL_SIEVE_HPP
 
@@ -31,14 +23,21 @@
 #include <type_traits>
 #include <vector>
 
+/**
+ * @author Emma Casey
+ * @date 2024-06-14
+ * @file sieve.hpp
+ * @brief Defines a function template that finds all prime numbers below a given
+ * ceiling using a Sieve of Eratosthenes.
+ */
+
 namespace primal::utils::math {
 
 /**
- * Computes the prime numbers up to a given ceiling using a Sieve of
- * Eratosthenes.
+ * Find all prime numbers below a given ceiling using a Sieve of Eratosthenes.
  * @tparam T Unsigned integer type
  * @param ceiling Largest number to check
- * @param primes Vector of prime numbers found
+ * @param primes Vector of primes found
  */
 template <typename T>
 requires std::is_unsigned_v<T>
@@ -49,37 +48,36 @@ void sieve(T ceiling, std::vector<T>& primes) {
     // Return early unless the ceiling is above the first prime number (2).
     if (ceiling <= 2) return;
 
-    // Prepare a bool vector to mark ruled out numbers.
-    std::vector<bool> is_prime(ceiling, true);
+    // Prepare a vector to mark ruled out numbers.
+    std::vector<bool> isPrime(ceiling, true);
 
-    // Mark 0 and 1 as non-prime (they are neither prime nor composite).
-    is_prime[0] = is_prime[1] = false;
+    // Rule out 0 and 1 (they are neither prime nor composite).
+    isPrime[0] = isPrime[1] = false;
 
-    // Mark all even numbers as non-prime.
-    // Skip the number 2 because it is an exception to the rule.
+    // Rule out all even numbers (skip 2 because it is an exception).
     for (T i = 4; i < ceiling; i += 2) {
-        is_prime[i] = false;
+        isPrime[i] = false;
     }
 
-    // Mark multiples of known primes as composite.
-    // Only check odd numbers because the evens have already been covered.
+    // Rule out multiples of primes.
+    // Only check odds because evens have already been ruled out.
     for (T i = 3; i * i < ceiling; i += 2) {
         // Skip non-prime numbers.
-        if (!is_prime[i]) continue;
+        if (!isPrime[i]) continue;
 
-        // Mark multiples of the current number as non-prime.
+        // Rule out multiples of the current number.
         for (T j = i * i; j < ceiling; j += i * 2) {
-            is_prime[j] = false;
+            isPrime[j] = false;
         }
     }
 
-    // Populate the primes vector with the sieved primes.
+    // Fill the primes vector with the remaining numbers.
     primes.push_back(2);
-    for (T i = 3; i < is_prime.size(); i += 2) {
-        if (is_prime[i]) primes.push_back(i);
+    for (T i = 3; i < isPrime.size(); i += 2) {
+        if (isPrime[i]) primes.push_back(i);
     }
 }
 
-}
+} // namespace primal::utils::math
 
 #endif // PRIMAL_SIEVE_HPP

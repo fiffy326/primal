@@ -18,7 +18,7 @@
 /**
  * @author Emma Casey
  * @date 2024-06-14
- * @file format_specifier.hpp
+ * @file format-specifier.hpp
  * @brief Defines a function template that gets the printf format specifier
  * associated with a given type.
  */

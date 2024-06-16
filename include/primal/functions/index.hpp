@@ -15,6 +15,9 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+#ifndef PRIMAL_INDEX_HPP
+#define PRIMAL_INDEX_HPP
+
 /**
  * @author Emma Casey
  * @date 2024-06-14
@@ -22,9 +25,6 @@
  * @brief Defines a function template that prints the prime with a particular
  * index.
  */
-
-#ifndef PRIMAL_INDEX_HPP
-#define PRIMAL_INDEX_HPP
 
 #include <cmath>
 #include <concepts>
@@ -34,54 +34,56 @@
 
 #include "primal/utils/math/sieve.hpp"
 
-namespace primal::command {
+namespace primal::functions {
 
 /**
  * Prints the prime with a particular index.
  * @tparam T Unsigned integer type
- * @param n Prime index
+ * @param number Prime index
  */
 template <typename T>
 requires std::is_unsigned_v<T>
-void index(T n) {
-    // Prime number theorem estimate of the Nth prime.
-    T ceiling_estimate = n * std::log(n) + n * std::log(std::log(n));
+void index(T number) {
+    using std::log, std::max;
+    using utils::math::sieve;
 
-    // Minimum sieve ceiling (in case the estimate is below the Nth prime).
-    T ceiling_min = 15;
+    // Prepare a vector to store the primes found.
+    std::vector<T> primes;
 
-    // Actual sieve ceiling used for computations.
+    // Sieve ceiling used for calculations.
     T ceiling;
 
-    // Prepare a vector to store the sieved primes.
-    std::vector<T> primes;
+    // Prime number theorem estimate of the Nth prime.
+    T ceilingEstimate = number * log(number) + number * log(log(number));
+
+    // Minimum sieve ceiling (in case the estimate is below the Nth prime).
+    T ceilingMin = 15;
+
+    // Offset the number by -1 to compensate for zero-based indexing.
+    number--;
 
     // Sieve until the Nth prime is found.
     while (true) {
-        // (Re)compute the sieve ceiling.
-        ceiling = std::max(ceiling_estimate, ceiling_min);
+        // (Re)calculate the sieve ceiling.
+        ceiling = max(ceilingEstimate, ceilingMin);
 
-        // Compute the primes up to the ceiling.
-        utils::math::sieve(ceiling, primes);
-
-        // Subtract 1 to compensate for zero-based indexing.
-        T i = n - 1;
+        // Calculate the primes up to the ceiling.
+        sieve(ceiling, primes);
 
         // Display the Nth prime if it was found.
-        if (i < primes.size()) {
-            std::cout << "Prime #" << n << " = " << primes[i] << "\n";
+        if (number < primes.size()) {
+            std::cout << "Prime #" << number << " = " << primes[number] << "\n";
             break;
         }
 
-        // Increase the sieve ceiling by 10% if the Nth prime wasn't found.
-        std::cout << "Increasing sieve ceiling by 10%...\n";
-        ceiling_min = static_cast<T>(ceiling * 1.1);
+        // Increase the sieve ceiling by 10% if the Nth prime was not found.
+        ceilingMin = static_cast<T>(ceiling * 1.1);
 
         // Clear the primes vector before sieving again.
         primes.clear();
     }
 }
 
-} // namespace primal::commands
+} // namespace primal::functions
 
 #endif // PRIMAL_INDEX_HPP

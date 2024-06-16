@@ -23,13 +23,13 @@
  * it to the requested type.
  */
 
+#ifndef PRIMAL_PROMPT_HPP
+#define PRIMAL_PROMPT_HPP
+
 #include <iostream>
 #include <string>
 
 #include "primal/utils/string/parse.hpp"
-
-#ifndef PRIMAL_PROMPT_HPP
-#define PRIMAL_PROMPT_HPP
 
 namespace primal::utils {
 
