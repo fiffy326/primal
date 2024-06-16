@@ -51,5 +51,4 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.1
 add_custom_target(uninstall
         COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_INSTALL_PREFIX}/bin/${PROJECT_NAME}
         COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_INSTALL_PREFIX}/share/man/man1/${PROJECT_NAME}.1
-        COMMENT "Removing installed files"
-)
+        COMMENT "Removing installed files")
