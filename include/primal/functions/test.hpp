@@ -23,42 +23,42 @@
  * prime.
  */
 
+#ifndef PRIMAL_TEST_HPP
+#define PRIMAL_TEST_HPP
+
 #include <concepts>
 #include <iostream>
 #include <type_traits>
 #include <vector>
 
-#include "primal/utils/math/primality.hpp"
-#include "primal/utils/math/primality_test.hpp"
+#include "primal/utils/math/primality-test.hpp"
 
-#ifndef PRIMAL_TEST_HPP
-#define PRIMAL_TEST_HPP
-
-namespace primal::command {
+namespace primal::functions {
 
 /**
  * Prints whether a given number is a prime.
  * @tparam T Unsigned integer type
- * @param n Number to test
+ * @param number Number to test
  */
 template <typename T>
 requires std::is_unsigned_v<T>
-void test(T n) {
-    using namespace utils::math;
+void test(T number) {
+    using utils::math::Primality;
+    using utils::math::sieveTest;
 
-    switch (sieveTest(n)) {
+    switch (sieveTest(number)) {
     case Primality::PRIME:
-        std::cout << n << " is prime.\n";
+        std::cout << number << " is prime.\n";
         break;
     case Primality::COMPOSITE:
-        std::cout << n << " is composite.\n";
+        std::cout << number << " is composite.\n";
         break;
     case Primality::NEITHER:
-        std::cout << n << " is neither prime nor composite.\n";
+        std::cout << number << " is neither prime nor composite.\n";
         break;
     }
 }
 
-} // namespace primal::commands
+} // namespace primal::functions
 
 #endif // PRIMAL_TEST_HPP

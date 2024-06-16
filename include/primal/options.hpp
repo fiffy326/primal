@@ -18,32 +18,43 @@
 /**
  * @author Emma Casey
  * @date 2024-06-14
- * @file cli.hpp
- * @brief Declares a Cli class that parses command-line arguments.
+ * @file options.hpp
+ * @brief Declares an Options class that parses command-line arguments.
  */
 
-#ifndef PRIMAL_CLI_HPP
-#define PRIMAL_CLI_HPP
+#ifndef PRIMAL_OPTIONS_HPP
+#define PRIMAL_OPTIONS_HPP
 
 #include <cstdint>
 #include <string>
 
 #include "cxxopts.hpp"
-#include "primal/command.hpp"
 
 namespace primal {
 
 /**
+ * Represents the different functions that the program may perform.
+ */
+enum class Function {
+    INTERACTIVE = 0,
+    INDEX = 1,
+    LIST = 2,
+    TEST = 3,
+    VERSION = 4,
+    HELP = 5
+};
+
+/**
  * Parses command-line arguments.
  */
-class Cli {
+class Options {
 public:
     /**
-     * Parse the command-line arguments.
+     * Parse command-line arguments.
      * @param argc Number of command-line arguments
      * @param argv Command-line arguments
      */
-    Cli(int argc, char** argv);
+    Options(int argc, char** argv);
 
     /**
      * Get the program help text.
@@ -52,34 +63,34 @@ public:
     std::string getHelpText() const;
 
     /**
-     * Command associated with the provided options.
+     * Function associated with the provided command-line options.
      */
-    Command command;
+    Function function;
 
     /**
-     * Argument value for the '--list' command.
+     * Argument value for the '--index' option.
      */
     uint64_t indexArg;
 
     /**
-     * Argument value for the '--index' command.
+     * Argument value for the '--list' option.
      */
     uint64_t listArg;
 
     /**
-     * Argument value for the '--test' command.
+     * Argument value for the '--test' option.
      */
     uint64_t testArg;
 
 private:
     /**
-     * Add the command-line options to the cxxopts instance.
+     * Add the command-line options to the underlying cxxopts instance.
      */
     void addOptions();
 
     /**
-     * Parse the command-line options and assign their values to their
-     * respective attributes.
+     * Parse the command-line options from the cxxopts instance and assign their
+     * values to their respective attributes.
      * @param argc Number of command-line arguments
      * @param argv Command-line arguments
      */
@@ -91,17 +102,7 @@ private:
     cxxopts::Options opts;
 
     /**
-     * Flag for the '--help' command.
-     */
-    bool helpFlag;
-
-    /**
-     * Flag for the '--version' command.
-     */
-    bool versionFlag;
-
-    /**
-     * Program description for the help message.
+     * Program description for the help text.
      */
     static constexpr char description[] =
         "Computes prime numbers using a Sieve of Eratosthenes.";
@@ -109,4 +110,4 @@ private:
 
 } // namespace primal
 
-#endif // PRIMAL_CLI_HPP
+#endif // PRIMAL_OPTIONS_HPP

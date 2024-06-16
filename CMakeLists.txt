@@ -35,7 +35,7 @@ endif ()
 # Configure version.hpp
 configure_file(
         ${PROJECT_SOURCE_DIR}/cmake/version.hpp.in
-        ${CMAKE_CURRENT_BINARY_DIR}/version.hpp @ONLY)
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/version.hpp @ONLY)
 
 # Configure the manpage
 configure_file(

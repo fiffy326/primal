@@ -28,55 +28,53 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "primal/ascii_art.hpp"
-#include "primal/cli.hpp"
-#include "primal/command/index.hpp"
-#include "primal/command/list.hpp"
-#include "primal/command/test.hpp"
+#include "primal/ascii-art.hpp"
+#include "primal/functions/index.hpp"
+#include "primal/functions/list.hpp"
+#include "primal/functions/test.hpp"
+#include "primal/options.hpp"
 #include "primal/utils/prompt.hpp"
-#include "primal/utils/string/parse.hpp"
-#include "version.hpp"
+#include "primal/version.hpp"
 
 void primal::session() {
-    using primal::Cli;
-    using primal::utils::prompt;
+    using utils::prompt;
 
     std::cout << asciiArt;
-    std::cout << "[1] Print every prime up to a given ceiling.\n"
-              << "[2] Print the prime with a particular index.\n"
+    std::cout << "[1] Print the prime with a particular index.\n"
+              << "[2] Print every prime up to a given ceiling.\n"
               << "[3] Print whether a given number is a prime.\n\n";
 
-    switch (prompt<Command>("Option: ")) {
-    case Command::LIST:
-        command::list(prompt<uint64_t>("Ceiling: "));
+    switch (prompt<Function>("Option: ")) {
+    case Function::INDEX:
+        functions::index(prompt<uint64_t>("Index: "));
         break;
-    case Command::INDEX:
-        command::index(prompt<uint64_t>("Index: "));
+    case Function::LIST:
+        functions::list(prompt<uint64_t>("Ceiling: "));
         break;
-    case Command::TEST:
-        command::test(prompt<uint64_t>("Number: "));
+    case Function::TEST:
+        functions::test(prompt<uint64_t>("Number: "));
         break;
     default:
         throw std::runtime_error("Invalid option.");
     }
 }
 
-void primal::session(Cli& cli) {
-    switch (cli.command) {
-    case Command::INDEX:
-        command::index(cli.indexArg);
+void primal::session(const Options& options) {
+    switch (options.function) {
+    case Function::INDEX:
+        functions::index(options.indexArg);
         break;
-    case Command::LIST:
-        command::list(cli.listArg);
+    case Function::LIST:
+        functions::list(options.listArg);
         break;
-    case Command::TEST:
-        command::test(cli.testArg);
+    case Function::TEST:
+        functions::test(options.testArg);
         break;
-    case Command::HELP:
-        std::cout << cli.getHelpText() << "\n";
-        break;
-    case Command::VERSION:
+    case Function::VERSION:
         std::cout << "Version: " << version << "\n";
+        break;
+    case Function::HELP:
+        std::cout << options.getHelpText() << "\n";
         break;
     default:
         throw std::runtime_error("Invalid option.");
