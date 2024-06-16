@@ -27,7 +27,7 @@ Show version information.
 Show usage information.
 .SH EXAMPLES
 .TP
-.B Start an interactive session.
+.B Start an interactive session:
 .nf
 .B primal
 .fi
