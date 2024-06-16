@@ -13,7 +13,7 @@ set_target_compiler_flags(${PROJECT_NAME})
 # Include directory
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
-#include the build directory for access to generated headers
+# Include the build directory for access to generated headers
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR})
 
 # Include external libraries
